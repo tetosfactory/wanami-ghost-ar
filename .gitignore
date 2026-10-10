@@ -1,0 +1,7 @@
+tools/blender-temp/
+tools/__pycache__/
+tools/qr-runtime/
+.DS_Store
+Thumbs.db
+qa/
+qr-output/

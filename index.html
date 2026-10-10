@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#121127">
+  <meta name="description" content="わなみフェスのおばけを呼んで、いっしょに記念撮影。スマホのカメラで床に3Dのおばけを置けます。">
+  <title>おばけと、ハイチーズ。｜わなみフェス</title>
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./assets/model-viewer.min.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">✦</span> WANAMI FES <span class="brand-sub">おばけの撮影室</span></a><span class="tag">スマホでAR体験</span></header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div class="intro">
+        <p class="eyebrow"><span></span> ここに、おばけがやってくる。</p>
+        <h1 id="title">おばけと、<br><span>ハイチーズ。</span></h1>
+        <p class="lead">カメラを床に向けたら、<br>ふしぎな友だちと記念撮影。</p>
+        <div class="intro-bottom"><span class="small-star" aria-hidden="true">✧</span><p>アプリのインストール不要<br><span>iPhone / AndroidのAR対応端末で楽しめます</span></p></div>
+      </div>
+      <div class="viewer-card">
+        <div class="card-top"><span><i class="live-dot"></i> GHOST No. 01</span><span>FRIENDLY GHOST</span></div>
+        <div class="viewer-stage">
+          <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+          <span class="stage-star star-one" aria-hidden="true">✦</span><span class="stage-star star-two" aria-hidden="true">✧</span>
+          <model-viewer id="ghost" src="./assets/ghost.glb" ios-src="./assets/ghost.usdz" poster="./assets/ghost-poster.png"
+            alt="笑顔の白いおばけの3Dモデル" ar ar-modes="scene-viewer quick-look" ar-placement="floor" ar-scale="auto"
+            camera-controls touch-action="pan-y" shadow-intensity="1" exposure="1" environment-image="neutral"
+            camera-orbit="0deg 80deg 2.5m" interaction-prompt="none" loading="eager" reveal="auto">
+            <div slot="progress-bar" class="loading" id="loading"><span id="loading-label">おばけを準備しています…</span><div class="progress-track"><span id="progress"></span></div></div>
+            <button slot="ar-button" hidden aria-hidden="true" tabindex="-1"></button>
+          </model-viewer>
+          <span class="model-caption">指で回して、見てみよう</span>
+        </div>
+        <div class="action-area">
+          <button class="ar-button" id="start-ar" disabled><span aria-hidden="true">✦</span><span id="button-label">おばけを準備中…</span><span aria-hidden="true">↗</span></button>
+          <p id="status" class="status" role="status" aria-live="polite">モデルを読み込んでいます。</p>
+          <button id="retry" class="text-button" hidden>もう一度読み込む</button>
+        </div>
+      </div>
+    </section>
+    <section class="how-to" aria-labelledby="how-title">
+      <div class="section-heading"><h2 id="how-title">3ステップで、いっしょに。</h2><span>HOW TO PLAY</span></div>
+      <ol class="steps">
+        <li><span class="step-number">01</span><div><h3>おばけを呼ぶ</h3><p>上のボタンをタップ。AR画面が開いたら、カメラの使用を許可します。</p></div></li>
+        <li><span class="step-number">02</span><div><h3>床に置いてみる</h3><p>明るい場所で床を映し、スマホをゆっくり動かします。配置後は指で移動・拡大縮小できます。</p></div></li>
+        <li><span class="step-number">03</span><div><h3>並んで、パシャ！</h3><p>おばけの横に立って、撮る人にスマホを渡しましょう。AR画面の撮影ボタンで記念撮影。</p></div></li>
+      </ol>
+    </section>
+    <section class="photo-note"><span class="photo-icon" aria-hidden="true">◎</span><div><h2>撮った写真は、あなたのスマホに。</h2><p>撮影後は端末の保存・共有操作を使ってください。撮影ボタンがない場合は、スクリーンショットでも残せます。このWebアプリは写真を収集しません。</p></div><span class="note-spark" aria-hidden="true">✧</span></section>
+    <section class="help" aria-label="使い方の補足">
+      <details><summary>iPhone / Androidの撮影方法</summary><div><p><strong>iPhone：</strong>Safariで開き、ARを起動したら「AR」表示で床を映します。画面の撮影ボタンを使い、表示された写真から保存・共有してください。</p><p><strong>Android：</strong>Chromeで開き、Scene ViewerのAR表示で配置します。画面に撮影ボタンがあればタップして保存・共有してください。撮影ボタンがない端末ではスクリーンショットを使います。</p><p>操作やボタンの位置はOS・端末・バージョンで異なります。初期サイズは高さ約1mです。</p></div></details>
+      <details id="troubleshooting"><summary>おばけが出ないときは？</summary><div><p>LINE・Instagramなどのアプリ内ブラウザでは、メニューからSafari（iPhone）またはChrome（Android）で開き直してください。</p><p>床が暗い、無地、光を強く反射している場合は、明るい場所の模様がある床で試してください。カメラを使えない場合は、端末のブラウザ・ARビューアのカメラ設定を確認してください。</p><p>AndroidではARCore対応端末と最新のGoogleアプリ・Google Play開発者サービス（AR）が必要です。非対応端末やパソコンでは3Dプレビューを楽しめます。</p><p>おばけが人の手前に重なって表示されることがあります。並んで立つと撮りやすくなります。</p></div></details>
+    </section>
+  </main>
+  <footer><span>WANAMI FES <span class="footer-star">✦</span> GHOST PHOTO ROOM</span><small>足元と周りに気をつけて、楽しんでね。</small></footer>
+  <noscript><p class="noscript">3D表示にはJavaScriptが必要です。ブラウザの設定で有効にしてください。</p></noscript>
+</body>
+</html>

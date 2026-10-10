@@ -21,4 +21,6 @@
 ## 公開後の確認
 
 GitHub Desktopから `https://github.com/tetosfactory/wanami-ghost-ar` へmainブランチのアップロードを確認しました。
-GitHub Pages公開状態とURL、QRの読取結果は、公開後に追記します。
+GitHub Pagesをmain / (root)で有効化し、`https://tetosfactory.github.io/wanami-ghost-ar/` の配信成功を確認しました。
+公開URLでも1280×1000と390×844の3D読込・レイアウト検証が成功しました。必須モデルファイルの相対パスがサブフォルダで動作しています。
+確定した公開URL用のQR（PNG / SVG）をローカルの `qr-output` に作成しました。

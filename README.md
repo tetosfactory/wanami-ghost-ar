@@ -2,6 +2,8 @@
 
 GitHub Pagesで公開する静的Webアプリです。ビルド・npm・サーバー契約は不要です。
 
+公開URL： https://tetosfactory.github.io/wanami-ghost-ar/
+
 ## GitHub Desktopで公開
 
 1. GitHub Desktopで **File → Add local repository** を選び、この `wanami-ghost-ar` フォルダを追加します。上位のホラー素材フォルダを追加しないでください。

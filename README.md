@@ -36,4 +36,8 @@ Pages URLが決まるまでは完成版QRを生成しません。独自ドメイ
 
 ブラウザ確認結果・モデル情報は `VALIDATION.md` と `model-report.json`。実機ARは別途確認が必要です。
 
+開発用の確認は、Node.jsとPlaywrightを用意してローカルHTTPサーバーを起動し、`node tools/check.cjs` を実行します。標準の確認先は `http://127.0.0.1:8766/`。`AR_TEST_URL` 環境変数で公開先やサブフォルダのURLにも変更できます。通常の公開・利用にこれらの開発ツールは不要です。
+
+QRを再生成する場合は、Pythonと `qrcode` パッケージを用意し、`python tools/make_qr.py <確定したHTTPS公開URL>` を実行します。配信されたARページを検証してからPNGとSVGを `qr-output` に保存します。QR画像はリポジトリへ自動追加しません。
+
 参考：[model-viewer](https://modelviewer.dev/docs/index.html)、[Scene Viewer](https://developers.google.com/ar/develop/scene-viewer)、[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)。

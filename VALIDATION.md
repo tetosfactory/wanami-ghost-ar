@@ -20,4 +20,5 @@
 
 ## 公開後の確認
 
+GitHub Desktopから `https://github.com/tetosfactory/wanami-ghost-ar` へmainブランチのアップロードを確認しました。
 GitHub Pages公開状態とURL、QRの読取結果は、公開後に追記します。
